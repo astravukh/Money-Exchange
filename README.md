@@ -38,4 +38,3 @@ If the currency that you would like to exchange more than 10000 please return ne
 
 #### Write your code in `src/index.js`
 #### Run test locally `npm test`
-# rsschool-profile

@@ -5,9 +5,7 @@ module.exports = function makeExchange(currency) {
     if(currency>10000){
         return {error: "You are rich, my friend! We don't have so much coins for exchange"};
     }
-    if(currency <= 0){
-        return {};
-    }
+
     var coinNameAndValue = {
         H: 50,
         Q: 25,
@@ -21,7 +19,7 @@ module.exports = function makeExchange(currency) {
 	    var modulo = currency%coinNameAndValue[key];
         currency = Math.floor(currency/coinNameAndValue[key]);
         
-        if(currency != 0){
+        if(currency > 0){
             exchange[key] = currency;
         }
         if(modulo == 0){
